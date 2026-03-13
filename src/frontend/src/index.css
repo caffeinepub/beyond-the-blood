@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.97 0.012 75;
+    --foreground: 0.15 0.025 30;
+    --card: 1 0 0;
+    --card-foreground: 0.15 0.025 30;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.025 30;
+    --primary: 0.65 0.2 48;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.95 0.015 75;
+    --secondary-foreground: 0.15 0.025 30;
+    --muted: 0.94 0.008 75;
+    --muted-foreground: 0.48 0.025 35;
+    --accent: 0.72 0.16 52;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.52 0.22 25;
+    --destructive-foreground: 1 0 0;
+    --border: 0.88 0.018 75;
+    --input: 0.88 0.018 75;
+    --ring: 0.65 0.2 48;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

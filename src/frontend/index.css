@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Fraunces';
+  src: url('/assets/fonts/Fraunces.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/assets/fonts/GeneralSans-Variable.woff2') format('woff2');
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 97 0.008 80;
+    --foreground: 12 0.05 255;
+
+    --card: 99 0.005 80;
+    --card-foreground: 12 0.05 255;
+
+    --popover: 99 0.005 80;
+    --popover-foreground: 12 0.05 255;
+
+    --primary: 22 0.065 255;
+    --primary-foreground: 97 0.008 80;
+
+    --accent: 68 0.2 50;
+    --accent-foreground: 15 0.04 255;
+
+    --secondary: 90 0.015 255;
+    --secondary-foreground: 25 0.05 255;
+
+    --muted: 93 0.01 80;
+    --muted-foreground: 38 0.04 255;
+
+    --destructive: 45 0.22 25;
+    --destructive-foreground: 97 0.008 80;
+
+    --border: 88 0.015 255;
+    --input: 88 0.015 255;
+    --ring: 68 0.2 50;
+
+    --radius: 0.875rem;
+
+    --chart-1: 68 0.2 50;
+    --chart-2: 22 0.065 255;
+    --chart-3: 55 0.15 45;
+    --chart-4: 60 0.12 240;
+    --chart-5: 80 0.1 55;
+
+    --sidebar: 97 0.008 80;
+    --sidebar-foreground: 12 0.05 255;
+    --sidebar-primary: 22 0.065 255;
+    --sidebar-primary-foreground: 97 0.008 80;
+    --sidebar-accent: 90 0.015 255;
+    --sidebar-accent-foreground: 25 0.05 255;
+    --sidebar-border: 88 0.015 255;
+    --sidebar-ring: 68 0.2 50;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .section-cream {
+    background-color: oklch(97.5% 0.008 80);
+  }
+  .section-navy {
+    background-color: oklch(14% 0.055 255);
+  }
+  .section-warm {
+    background-color: oklch(95% 0.014 70);
+  }
+}
